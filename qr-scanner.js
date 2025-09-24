@@ -97,9 +97,13 @@ function handleQRCodeResult(qrData) {
   document.getElementById('uidInput').value = qrData;
   
   // 自动查询学生信息
-  if (typeof getStudentInfo === 'function') {
-    getStudentInfo();
-  }
+  setTimeout(() => {
+    if (typeof getStudentInfo === 'function') {
+      getStudentInfo();
+    } else {
+      console.log('getStudentInfo函数未找到');
+    }
+  }, 100);
 }
 
 // 关闭二维码扫描器
