@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>学生健康筛查系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .container {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+    .screening-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    .option-card {
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .option-card:active {
+      transform: scale(0.98);
+    }
+    .option-card:hover {
+      border-color: #667eea;
+      background: #f0f2ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    }
+    .option-icon {
+      font-size: 2.5em;
+      margin-bottom: 12px;
+    }
+    .option-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .option-desc {
+      color: #666;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    .footer {
+      color: #999;
+      font-size: 0.85em;
+      margin-top: 20px;
+    }
+    
+    /* 平板适配 */
+    @media (min-width: 768px) {
+      .container {
+        padding: 30px;
+        border-radius: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+      }
+      .subtitle {
+        font-size: 1.1em;
+        margin-bottom: 35px;
+      }
+      .screening-options {
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .option-card {
+        padding: 25px;
+        border-radius: 15px;
+      }
+      .option-card:hover {
+        transform: translateY(-3px);
+      }
+      .option-icon {
+        font-size: 3em;
+        margin-bottom: 15px;
+      }
+      .option-title {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+      .option-desc {
+        font-size: 1em;
+      }
+    }
+    
+    /* 大屏适配 */
+    @media (min-width: 1024px) {
+      .container {
+        padding: 40px;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+      .subtitle {
+        margin-bottom: 40px;
+      }
+      .screening-options {
+        gap: 25px;
+        margin-bottom: 35px;
+      }
+      .option-card {
+        padding: 30px;
+      }
+      .option-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+      }
+      .option-icon {
+        font-size: 3.5em;
+        margin-bottom: 15px;
+      }
+      .option-title {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏥 学生健康筛查系统</h1>
+    <p class="subtitle">请选择筛查项目</p>
+    
+    <div class="screening-options">
+      <a href="height-weight.html" class="option-card">
+        <div class="option-icon">📏</div>
+        <div class="option-title">身高体重筛查</div>
+        <div class="option-desc">测量并记录学生的身高、体重数据，评估生长发育状况</div>
+      </a>
+      
+      <a href="vision.html" class="option-card">
+        <div class="option-icon">👁️</div>
+        <div class="option-title">视力筛查</div>
+        <div class="option-desc">检测学生视力状况，记录左右眼视力数据</div>
+      </a>
+      
+      <a href="refraction.html" class="option-card">
+        <div class="option-icon">🔬</div>
+        <div class="option-title">屈光筛查</div>
+        <div class="option-desc">使用蓝牙设备检测屈光状态，记录球镜、柱镜、轴向等数据</div>
+      </a>
+    </div>
+    
+    <div class="footer">
+      <p>💡 屈光筛查需要连接蓝牙设备</p>
+    </div>
+  </div>
+</body>
+</html>
